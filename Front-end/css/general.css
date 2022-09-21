@@ -1,0 +1,277 @@
+      * {
+          margin: 0px;
+          padding: 0px;
+      }
+
+      ul li {
+          list-style: none;
+      }
+
+      body {
+          font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          color: #fff;
+          background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+          background-attachment: fixed;
+      }
+
+      a {
+          text-decoration: none;
+          color: #fff;
+      }
+
+      .bg {
+          opacity: 1;
+      }
+
+      .star {
+          width: 1px;
+          height: 1px;
+          border-radius: 50%;
+          background-color: white;
+          box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.4);
+      }
+
+      .box {
+          position: relative;
+          width: 200px;
+          height: 200px;
+          /* background-color: antiquewhite; */
+          margin: 10px auto;
+          /* border: 2px solid #666; */
+      }
+
+      .center {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+      }
+
+      .sun {
+          width: 50px;
+          height: 50px;
+          background-color: rgb(227, 107, 10);
+          box-shadow: 0 0 21px #e58551, 0 0 21px rgb(138 28 28) inset;
+      }
+
+      .earth-line {
+          width: 180px;
+          height: 180px;
+          border: 2px solid #344a64;
+          animation: move 10s linear infinite;
+      }
+
+      .earth {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: blue;
+          margin: auto;
+          margin-top: -6px;
+          box-shadow: 0px -4px 0px 0px #457d8c inset;
+      }
+
+      .moon {
+          width: 5px;
+          height: 5px;
+          background-color: antiquewhite;
+          border-radius: 50%;
+          margin: auto;
+          position: relative;
+          top: -8px;
+          animation: moonMove 4s linear infinite;
+          transform-origin: center 14px;
+      }
+
+      .venus-lins {
+          width: 120px;
+          height: 120px;
+          border: 2px solid #344a64;
+          animation: move 8s linear infinite;
+      }
+
+      .venus {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: rgb(236, 173, 15);
+          margin: auto;
+          margin-top: -6px;
+          box-shadow: 0px -4px 0px 0px #d5e063 inset;
+      }
+
+      .spark-lins {
+          width: 80px;
+          height: 80px;
+          border: 2px solid #344a64;
+          animation: move 5s linear infinite;
+      }
+
+      .spark {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: rgb(226, 35, 14);
+          margin: auto;
+          margin-top: -6px;
+          box-shadow: 0px -2px 0px 0px #f3614a inset;
+      }
+
+      /* 轨道的旋转动画 */
+      @keyframes move {
+          100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+          }
+      }
+
+      @keyframes moonMove {
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+
+      /* 提示框 */
+      .tip {
+          z-index: 9999999999999;
+          display: none;
+          opacity: 1 !important;
+          position: fixed !important;
+          top: 39%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          position: relative;
+          width: 302px;
+          height: 152px;
+          background-color: black;
+          color: var(--mainColor);
+          text-align: center;
+          line-height: 120px;
+      }
+
+      .tip::after,
+      .tip::before {
+          box-sizing: border-box;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+      }
+
+      .tip::before {
+          top: 0;
+          left: 0;
+          border-top: 2px solid var(--mainColor);
+          border-right: 2px solid var(--mainColor);
+          animation: before 0.5s linear forwards;
+      }
+
+      .tip::after {
+          right: 0;
+          bottom: 0;
+          border-bottom: 2px solid var(--mainColor);
+          border-left: 2px solid var(--mainColor);
+          animation: before 0.5s linear forwards;
+      }
+
+      @keyframes before {
+          60% {
+              width: 100%;
+              height: 0;
+          }
+
+          100% {
+              width: 100%;
+              height: 100%;
+          }
+      }
+
+      .tipSon {
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 70px;
+          height: 37px;
+          background-color: black;
+          border: 2px solid var(--mainColor);
+          color: var(--mainColor);
+          text-align: center;
+          line-height: 37px;
+          border-radius: 10px;
+          cursor: pointer;
+      }
+
+      .tipSon:hover {
+          background-color: var(--mainColor);
+          color: #fff;
+      }
+
+      /* 按钮  和   边框上的样式 */
+      .btn {
+          cursor: pointer;
+          width: 73px;
+          height: 38px;
+          background-color: #fff;
+          text-align: center;
+          line-height: 38px;
+          border-radius: 15px;
+          margin: 40px auto;
+          font-size: 12px;
+          color: black;
+      }
+
+      .welcome {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -20px);
+          width: 160px;
+          height: 40px;
+          background-color: #282c40;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 3px;
+          color: #fff;
+          text-shadow: 0 0 6px #fff;
+      }
+
+      .slider {
+          float: left;
+          width: 18px;
+          height: 8px;
+          background-color: skyblue;
+          transform: translate(0px, -6px);
+          border: 2px solid #fff;
+      }
+
+      .sliderR {
+          float: right;
+          margin-right: 0px;
+          animation: sliderRMove 4s linear infinite;
+      }
+
+      .sliderL {
+          animation: sliderLMove 4s linear infinite;
+      }
+
+      @keyframes sliderRMove {
+          50% {
+              transform: translate(-200px, -6px);
+          }
+
+          100% {
+              transform: translate(0px, -6px);
+          }
+      }
+
+      @keyframes sliderLMove {
+          50% {
+              transform: translate(200px, -6px);
+          }
+
+          100% {
+              transform: translate(0px, -6px);
+          }
+      }

@@ -1,0 +1,276 @@
+:root {
+    --mainColor: #69b9ff
+}
+
+.home {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.home-top {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* background-color: aquamarine; */
+}
+
+.home-welcome {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translate(0, -50%);
+    font-size: 28px;
+    color: var(--mainColor);
+}
+
+.risk-box {
+    position: absolute;
+    top: 52%;
+    left: 300px;
+    transform: translate(0, -50%);
+    font-size: 14px;
+}
+
+.again {
+    width: 88px;
+    height: 32px;
+    margin: 5px auto;
+    color: black;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+}
+
+.home-welcomeR {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+}
+
+.home-welcomeR .home-color,
+.home-welcomeR .home-login {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: 70px;
+    height: 35px;
+    float: left;
+    line-height: 35px;
+    background-color: var(--mainColor);
+    cursor: pointer;
+}
+
+.home-color {
+
+    margin-right: 20px;
+}
+
+.subject {
+    display: none;
+}
+
+.home-color input {
+    position: absolute;
+    top: -26px;
+    left: 10px;
+}
+
+.home-bottom {
+    width: 1500px;
+    margin: 20px auto;
+}
+
+.home-bottom .item {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid var(--mainColor);
+    float: left;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.home-bottom .item:last-child {
+    width: 400px;
+}
+
+/* 三个盒子内容 */
+.home-bottom h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nodata {
+    margin: 200px auto;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700px;
+}
+
+#firstItem li,
+#second li {
+    font-size: 12px;
+    padding: 10px 0 10px 10px;
+}
+
+#firstItem li:hover,
+#second li:hover {
+    background-color: rgba(253, 253, 253, 0.5)
+}
+
+#firstItem .price,
+#second .price {
+    color: var(--mainColor);
+    font-style: normal;
+    margin-left: 20px;
+}
+
+#firstItem i,
+#second i {
+    float: right;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.unlink {
+    color: #666;
+}
+
+.unlink:hover {
+    color: red;
+}
+
+.add {
+    color: var(--mainColor);
+}
+
+.add:hover {
+    color: #fff;
+}
+
+.itemBtn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: 30px;
+    border: 2px solid var(--mainColor);
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--mainColor);
+    border-radius: 3px;
+}
+
+.itemBtn:hover {
+    background-color: var(--mainColor);
+    color: #fff;
+    box-shadow: 0px 0px 2px 1px var(--mainColor);
+}
+
+/* 饼图 */
+
+#main {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+}
+
+/* 问卷 */
+.questionnaire {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 700px;
+    background-color: rgb(20 22 29);
+    text-align: center;
+}
+
+.Shut-down {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.questionnaire h3 {
+    margin-top: 40px;
+    color: var(--mainColor);
+}
+
+.questionnaire p {
+    margin: 10px;
+    color: red;
+}
+
+.questionnaire-title {
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.questionnaire li {
+    margin-bottom: 30px;
+}
+
+.submitB {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 45px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: white;
+}
+
+/* 配比弹窗 */
+.RatioTip {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    /* border: 2px solid var(--mainColor); */
+    background-color: rgba(10, 9, 9, 0.8);
+    text-align: center;
+}
+
+.RatioTip h3 {
+    margin-top: 10px;
+}
+
+.RatioTip-input {
+    width: 60%;
+    height: 30px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.RatioTipBtn1 {
+    margin-left: -40px;
+}
+
+.RatioTipBtn2 {
+    margin-left: 40px;
+}

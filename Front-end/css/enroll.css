@@ -1,0 +1,101 @@
+  .Go {
+      position: relative;
+      width: 600px;
+      height: 935px;
+      border: 2px solid #fff;
+      margin: 20px auto;
+  }
+
+  .Go h1 {
+      display: inline-block;
+      margin: 30px 0px 0px 30px;
+      color: #fff;
+      font-weight: 300;
+      font-size: 25px;
+  }
+
+  .Go span {
+      display: inline-block;
+      transform: translate(250px, 0);
+  }
+
+  .Go a {
+      color: #ccc;
+      text-decoration: none;
+  }
+
+  .warning {
+      margin: 10px 0px;
+      width: 600px;
+      height: 102px;
+      text-align: center;
+  }
+
+  .warning p {
+      color: #ccc;
+      font-size: 16px;
+  }
+
+  .warning ol {
+      margin: 10px 0px;
+  }
+
+  .warning li {
+      font-size: 12px;
+      color: #ccc;
+      margin: 4px;
+      margin-left: 40px;
+  }
+
+  .data {
+      text-align: center;
+      width: 100%;
+      height: 682px;
+  }
+
+  .data .mas {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 700;
+      color: #3da4e8;
+      margin-left: 40px;
+  }
+
+  .data ul li {
+      text-align: right;
+      margin: 6px 0px;
+      color: #fff;
+      width: 70%;
+  }
+
+  .data ul li span {
+      position: absolute;
+      left: 174px;
+      font-size: 12px;
+  }
+
+  .data input {
+      outline: none;
+  }
+
+  .data ol {
+      color: #fff;
+  }
+
+  .data ol h4 {
+      color: #3da4e8;
+      margin-bottom: 5px;
+  }
+
+  .data ol li {
+      list-style: none;
+      margin: 10px 0px;
+  }
+
+  .data ol input {
+      margin: 5px 5px;
+  }
+
+  .data a {
+      color: #3da4e8;
+  }

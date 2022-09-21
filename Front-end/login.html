@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登陆页面</title>
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/ajax封装.js"></script>
+  </head>
+  <body>
+    <!-- 内容 -->
+    <div class="bg">
+      <!-- 星空背景图 -->
+      <div class="star"></div>
+      <!-- 星球动画 -->
+      <div class="box">
+        <!-- 太阳 -->
+        <div class="sun center"></div>
+        <!-- 地球轨道 -->
+        <div class="earth-line center">
+          <!-- 地球 -->
+          <div class="earth">
+            <!-- 月球 -->
+            <div class="moon"></div>
+          </div>
+        </div>
+        <!-- 金星轨道 -->
+        <div class="venus-lins center">
+          <div class="venus"></div>
+        </div>
+        <!-- 火星 -->
+        <div class="spark-lins center">
+          <div class="spark"></div>
+        </div>
+      </div>
+      <!-- 登陆页面盒子 -->
+      <div class="Go">
+        <div class="sliderL slider"></div>
+        <div class="sliderR slider"></div>
+        <div class="welcome">Welcome to login</div>
+        <h1>欢迎登陆</h1>
+        <span><a href="./enroll.html">没有账号？去注册</a></span>
+        <div class="reg">
+          <p>
+            账号：<input
+              type="text"
+              name="username"
+              placeholder="请输入用户名"
+              class="username"
+            />
+          </p>
+          <p>
+            密码：<input
+              type="password"
+              name="password"
+              placeholder="请输入密码"
+              class="password"
+            />
+          </p>
+          <div class="btn">确定登录</div>
+        </div>
+      </div>
+    </div>
+    <!-- 登录提示框 -->
+    <div class="tip">
+      <span>请输入账号</span>
+      <div class="tipSon">确定</div>
+    </div>
+    <script src="./js/jQ.js"></script>
+    <script src="./js/star.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/general.js"></script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>网站首页</title>
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/ajax封装.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.js"></script>
+  </head>
+  <body>
+    <!-- 背景 -->
+    <div class="bg">
+      <!-- 星空背景图 -->
+      <div class="star"></div>
+      <!-- 星球动画 -->
+      <div class="box">
+        <!-- 太阳 -->
+        <div class="sun center"></div>
+        <!-- 地球轨道 -->
+        <div class="earth-line center">
+          <!-- 地球 -->
+          <div class="earth">
+            <!-- 月球 -->
+            <div class="moon"></div>
+          </div>
+        </div>
+        <!-- 金星轨道 -->
+        <div class="venus-lins center">
+          <div class="venus"></div>
+        </div>
+        <!-- 火星 -->
+        <div class="spark-lins center">
+          <div class="spark"></div>
+        </div>
+      </div>
+      <div class="home">
+        <!-- 头部 -->
+        <div class="home-top">
+          <div class="home-welcome">welcome! <span>张三</span></div>
+          <div class="risk-box">
+            您的风险等级为：<span>很低</span>
+            <div class="again">重新评测</div>
+          </div>
+          <div class="home-welcomeR">
+            <div class="home-color">
+              主题
+              <div class="subject">
+                <input type="color" />
+              </div>
+            </div>
+            <div class="home-login">退出登录</div>
+          </div>
+        </div>
+        <!-- 内容 -->
+        <div class="home-bottom">
+          <div class="item">
+            <h3>推荐基金</h3>
+            <div class="nodata1 nodata">暂无数据</div>
+            <ul id="firstItem"></ul>
+            <div class="reset itemBtn">重置</div>
+          </div>
+          <div class="item">
+            <h3>基金配比</h3>
+            <ul id="second"></ul>
+            <div class="nodata2 nodata">暂无数据</div>
+            <div class="warehousing itemBtn">购买入仓</div>
+          </div>
+          <div class="item">
+            <h3>持仓资产</h3>
+
+            <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+            <div id="main"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 风险测试问卷 -->
+      <div class="questionnaire">
+        <div class="Shut-down">关闭</div>
+        <h3>风险测试问卷</h3>
+        <p>您的风险能力-请选择提供的选项之一，尽可能准确地回答以下所有问题</p>
+        <ul>
+          <li>
+            <div class="questionnaire-title">
+              1.你的总金融资产中有多少比例可用于投资（免费资产），因此不需要支付定义的负债或未来的具体计划?
+            </div>
+            <label><input type="radio" name="t1" value="1" /> 少于20%</label>
+            <label
+              ><input type="radio" name="t1" value="2" /> 在20%到40%之间%</label
+            >
+            <label
+              ><input type="radio" name="t1" value="3" /> 在40%到60%之间%</label
+            >
+            <label
+              ><input type="radio" name="t1" value="4" /> 在60%到90%之间%</label
+            >
+            <label><input type="radio" name="t1" value="5" /> 超过90%</label>
+          </li>
+          <li>
+            <div class="questionnaire-title">
+              2.从现在起，你不太可能需要大量资金从你的自由资产?(你的帐户可能还包括一些较长或较短的产品)?
+            </div>
+            <label><input type="radio" name="t2" value="3" />少于3年</label>
+            <label
+              ><input type="radio" name="t2" value="6" />在3到5年之间</label
+            >
+            <label
+              ><input type="radio" name="t2" value="9" />在5到8年之间</label
+            >
+            <label
+              ><input type="radio" name="t2" value="12" />在8到12年之间</label
+            >
+            <label><input type="radio" name="t2" value="15" />超过12年</label>
+          </li>
+          <li>
+            <div class="questionnaire-title">
+              3.你打算在多大程度上使用你的免费资产来资助你退休后的生活水平？
+            </div>
+            <label
+              ><input
+                type="radio"
+                name="t3"
+                value="1"
+              />全部或大部分（60%以上%）</label
+            >
+            <label
+              ><input type="radio" name="t3" value="2" />在30%到60%之间%</label
+            >
+            <label><input type="radio" name="t3" value="3" />低于30%</label>
+            <label><input type="radio" name="t3" value="5" />无（0%）</label>
+          </li>
+          <li>
+            <div class="questionnaire-title">
+              4.与你的自由资产相比，你每年的储蓄（收入减去支出）是多少？
+            </div>
+            <label><input type="radio" name="t4" value="1" /> 低（小于2%</label>
+            <label
+              ><input
+                type="radio"
+                name="t4"
+                value="2"
+              />中等（2%至5%之间%）</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="t4"
+                value="3"
+              />中等（5%至10%之间%）</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="t4"
+                value="4"
+              />相当高（在10%到20%之间%）</label
+            >
+            <label
+              ><input type="radio" name="t4" value="5" />高（20%以上%）</label
+            >
+          </li>
+
+          <li>
+            <div class="questionnaire-title">
+              5.假设你没有年收入（来自职业或投资），你能用你的免费资产为你目前的生活水平提供多长时间的资金？
+            </div>
+            <label><input type="radio" name="t5" value="1" />少于2年</label>
+            <label
+              ><input type="radio" name="t5" value="2" />在2至6年之间
+            </label>
+            <label
+              ><input type="radio" name="t5" value="3" />在6到10年之间</label
+            >
+            <label
+              ><input type="radio" name="t5" value="4" />在10年到15年之间</label
+            >
+            <label><input type="radio" name="t5" value="5" /> 超过15年</label>
+          </li>
+          <li>
+            <div class="questionnaire-title">
+              6.如果您的任何免费资产，您需要使用您的未来负债或计划(例如。
+              房地产购买、商业投资、贷款偿还)？
+            </div>
+            <label
+              ><input type="radio" name="t6" value="3" />多数（75%以上%）</label
+            >
+            <label
+              ><input type="radio" name="t6" value="6" />在75%到40%之间%</label
+            >
+            <label
+              ><input type="radio" name="t6" value="9" />在40%到20%之间%</label
+            >
+            <label
+              ><input type="radio" name="t6" value="12" />在20%到0%之间%</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="t6"
+                value="15"
+              />无负债或计划（0%）</label
+            >
+          </li>
+        </ul>
+        <div class="submitB">提交</div>
+      </div>
+    </div>
+    <!-- 提示框 -->
+    <div class="tip">
+      <span>请输入账号</span>
+      <div class="tipSon">确定</div>
+    </div>
+    <!-- 配比基金弹窗 -->
+    <div class="RatioTip">
+      <h3>请输入数量</h3>
+      <input
+        type="text"
+        class="RatioTip-input"
+        placeholder="请输入数量（最少一位只能是小数）"
+      />
+      <div class="RatioTipBtn">
+        <div class="RatioTipBtn1 itemBtn">取消</div>
+        <div class="RatioTipBtn2 itemBtn">购买</div>
+      </div>
+    </div>
+    <script src="./js/jQ.js"></script>
+    <script src="./js/star.js"></script>
+    <script src="./js/general.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

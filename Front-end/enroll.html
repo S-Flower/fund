@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册页面</title>
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/enroll.css" />
+    <script src="./js/ajax封装.js"></script>
+  </head>
+  <body>
+    <!-- 内容 -->
+    <div class="bg">
+      <!-- 星空背景图 -->
+      <div class="star"></div>
+      <!-- 星球动画 -->
+      <div class="box">
+        <!-- 太阳 -->
+        <div class="sun center"></div>
+        <!-- 地球轨道 -->
+        <div class="earth-line center">
+          <!-- 地球 -->
+          <div class="earth">
+            <!-- 月球 -->
+            <div class="moon"></div>
+          </div>
+        </div>
+        <!-- 金星轨道 -->
+        <div class="venus-lins center">
+          <div class="venus"></div>
+        </div>
+        <!-- 火星 -->
+        <div class="spark-lins center">
+          <div class="spark"></div>
+        </div>
+      </div>
+      <!-- 注册 -->
+      <div class="Go">
+        <div class="sliderL slider"></div>
+        <div class="sliderR slider"></div>
+        <div class="welcome">Welcome to login</div>
+        <h1>欢迎注册账号</h1>
+        <span><a href="./login.html">已注册？去登录</a></span>
+        <!-- 提示 -->
+        <div class="warning">
+          <p>请确保您在网上开设资产管理帐户的基本要求如下：</p>
+          <ol>
+            <li>年龄18岁及以上</li>
+            <li>不是美国居民或公民（“美国”）或其他美国人</li>
+            <li>拥有香港或中国内地银行帐户</li>
+          </ol>
+        </div>
+        <!-- 注册信息填写 -->
+        <div class="data">
+          <ul>
+            <li class="mas">申请人资料：</li>
+            <li>
+              <label for="username">*账号：</label>
+              <input
+                type="text"
+                name="username"
+                placeholder="用户名"
+                class="username"
+              /><span>(字母,数字,下划线,.)3-6位</span>
+            </li>
+            <li>
+              <label for="password">*密码： </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="密码"
+                class="password"
+              />
+              <span>(字母,数字,下划线,.)4-12位</span>
+            </li>
+            <li>
+              <label for="password">*确认密码：</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="请输入密码"
+                class="sure"
+              />
+            </li>
+            <li>
+              邮箱：
+              <input type="email" name="email" placeholder="测试（非必填）" />
+            </li>
+            <li>
+              城市：<input
+                type="text"
+                name="city"
+                placeholder="测试（非必填）"
+              />
+            </li>
+            <li class="mas">资金来源：</li>
+            <li>
+              开户地址：<input
+                type="text"
+                name="address"
+                placeholder="测试（非必填）"
+              />
+            </li>
+            <li>
+              开户银行：<input
+                type="text"
+                name="bank"
+                placeholder="测试（非必填）"
+              />
+            </li>
+            <li>
+              银行账号：<input
+                type="number"
+                name="Account"
+                placeholder="测试（非必填）"
+              />
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <h4>财务健康检查</h4>
+            </li>
+            <li>
+              <h4>1.你的年龄是多少?</h4>
+              <p>
+                <input type="radio" name="age" />18-30
+                <input type="radio" name="age" />31-40
+                <input type="radio" name="age" />41-50
+                <input type="radio" name="age" />51-61
+                <input type="radio" name="age" />61岁以上
+              </p>
+            </li>
+            <li>
+              <h4>2.你的最高教育水平是什么?</h4>
+              <p>
+                <input type="radio" name="education" />小学
+                <input type="radio" name="education" />初中
+                <input type="radio" name="education" />高中
+                <input type="radio" name="education" />大学
+              </p>
+            </li>
+            <li>
+              <h4>3. 你的投资目标是什么?(如适用，可选择多个选项)</h4>
+              <p>
+                <input type="checkbox" name="flag" /> 保本
+                <input type="checkbox" name="flag" /> 财富大厦
+                <input type="checkbox" name="flag" /> 退休计划
+                <input type="checkbox" name="flag" /> 儿童教育
+                <input type="checkbox" name="flag" />其他
+              </p>
+            </li>
+            <li><a href="#">协议声明</a></li>
+            <li><a href="#">协议文件</a></li>
+            <li>
+              <input type="checkbox" class="provision" />
+              本人已阅读及理解上述个人资料私隐声明，并同意其条款。
+            </li>
+          </ol>
+          <div class="btn">提交注册</div>
+        </div>
+      </div>
+    </div>
+    <!-- 登录提示框 -->
+    <div class="tip">
+      <span>请输入账号</span>
+      <div class="tipSon">确定</div>
+    </div>
+    <script src="./js/jQ.js"></script>
+    <script src="./js/star.js"></script>
+    <script src="./js/enroll.js"></script>
+    <script src="./js/general.js"></script>
+  </body>
+</html>
